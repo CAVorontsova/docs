@@ -1,3 +1,4 @@
+
 body{
     width: 620px;
     margin-left: auto;
@@ -14,14 +15,61 @@ body{
   padding: 10px;
 font-style: italic;
 }
+
+.docTitle{
+    font-weight: bold;    
+}
+
 input{
   border: none;
   border-bottom: 1px solid black;
-  width: 290px;
+ 
+}
+.contact_form input{
+    width: 290px; 
 }
 li{
   list-style-type: none;
 }
 .contact_form{
     text-align: right;
+}
+h5{
+    font-weight: bold;
+}
+.doc_form{
+    
+    width: 100%;
+}
+.doc_form input{
+    width: 590px; 
+}
+.DocFormComment{
+    margin-left: 35%;
+    margin-right: 30%;
+    
+}
+caption{
+    caption-side: top;
+    text-align: left;
+    font-weight: bold;
+    color: black;
+}
+th,td {
+    border: 1px solid black;
+    padding: 5px;
+}
+th {
+    width: 240px;
+}
+
+.EmptyField input{
+  border: none;
+ width: 300px;
+}
+table{
+    margin-bottom: 15px;
+}
+#SmallSize {
+    width: 150px;
 }
