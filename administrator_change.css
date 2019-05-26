@@ -70,6 +70,29 @@ th {
 table{
     margin-bottom: 15px;
 }
-#SmallSize {
+.SmallSize input {
     width: 150px;
+}
+.Podpis{
+    margin-left: 40px;
+    display: flex;
+}
+.DocumentData{
+    display: flex;
+    margin-left: 35px;
+}
+#SmallSize{
+    width: 170px;
+}
+#LittleData{
+    width:50px;
+}
+.DocFormPodpis{
+    margin-left: 35px;
+}
+input:invalid {
+     box-shadow: 0 0 5px 1px green;
+}
+input:valid {
+     box-shadow: 0 0 5px 1px red;
 }

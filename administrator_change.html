@@ -2,6 +2,8 @@
    <html>
     
     <head>
+        <meta charset="utf-8">
+        <title>Заявление на смену администратора домена</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="administrator_change.css">
     </head>
@@ -31,18 +33,18 @@
   </li>
 
   <li>
-        <label for="name">от</label>
-        <input type="text" name="name" pattern="[А-Яа-яЁё-0-9]"/><br>
+        <label for="NameBirth">от</label>
+        <input type="text" name="NameBirth" pattern="[А-Яа-яЁё]"/><br>
         <span> (ФИО, дата рождения) </span>
     </li>
 <li>
         <label for="INN"></label>
-        <input type="text" name="INN" pattern="[0-9]{10,12}"/><br>
+        <input  name="INN" pattern="[0-9]{10,12}"/><br>
         <span> (ИНН ИП (при наличии статуса ИП)) </span>
     </li>
     <li>
         <label for="Passport"></label>
-        <input type="text" name="Passport" pattern="[0-9]"/><br>
+        <input  name="Passport" pattern="[0-9]"/><br>
         <span> (серия, номер паспорта, когда выдан) </span>
     </li>
     <li>
@@ -52,7 +54,7 @@
     </li>
       <li>
        <label for="Address"> зарегистрированного по адресу </label><br>
-        <input type="text" name="Address"/><br>
+        <input  name="Address"/><br>
         <span> (адрес регистрации) </span>
     </li>
     </ul>
@@ -70,17 +72,17 @@
     </li>
     <li>
         <label for="name">Я,</label>
-        <input type="text" name="name" /><br>
+        <input type="text" name="name" pattern="[А-Яа-я]"/><br>
         <span class="DocFormComment"> (фамилия, имя, отчество) </span>
     </li>
       <li>
-        <label for="name">прошу передать права по администрированию домена(ов)</label>
-        <input type="text" name="name" /><br>
+        <label for="Domen">прошу передать права по администрированию домена(ов)</label>
+        <input type="text" name="Domen" pattern="[А-Яа-яЁё]"/><br>
         <span class="DocFormComment"> (наименование домена(ов)) </span>
     </li>
        <li>
-        <label for="name">и предоставляемых по этим доменам дополнительных услуг (при необходимости)</label>
-        <input type="text" name="name" /><br>
+        <label for="DopYslygi">и предоставляемых по этим доменам дополнительных услуг (при необходимости)</label>
+        <input type="text" name="DopYslygi" pattern="[А-Яа-яЁё]" /><br>
         <span class="DocFormComment"> (Primary, Secondary DNS) </span>
     </li>
     <li>
@@ -91,11 +93,11 @@
    <caption> для юридических лиц: </caption>
       <tr>
          <th>Наименование юр.лица</th>
-         <th class="EmptyField">    <input type="text" name="name" /> </th>
+         <th class="EmptyField">    <input type="text" name="OOOName" pattern="[А-Яа-яЁё]"/> </th>
       </tr>
       <tr>
          <th>email/тел.</th>
-         <th class="EmptyField">   <input type="text" name="name" /> </th>
+         <th class="EmptyField">   <input type="email" name="EmailTel"/> </th>
       </tr>
 </table>
 
@@ -103,40 +105,52 @@
    <caption> для физических лиц: </caption>
       <tr>
          <th>ФИО</th>
-         <th class="EmptyField">    <input type="text" name="name" /> </th>
+         <th class="EmptyField">    <input type="text" name="FizName" pattern="[А-Яа-яЁё]" /> </th>
       </tr>
       <tr>
          <th>email/тел.</th>
-         <th class="EmptyField">    <input type="text" name="name" /> </th>
+         <th class="EmptyField">    <input  type="email" name="EmailTel"/> </th>
       </tr>
 </table>
     
         <li>
-        <label for="name">Номер договора (название аккаунта) нового администратора/партнера (с указанием профиля): </label>
-        <input type="text" name="name" />
+        <label for="LKName">Номер договора (название аккаунта) нового администратора/партнера (с указанием профиля): </label>
+        <input type="text" name="LKName" pattern="[А-Яа-яЁё]"/>
         <span class="DocFormComment"> (номер договора с компанией REG.RU) </span>
     </li>
-     <li>
-        <input type="text" name="name" id="SmallSize" /> / <br>
-        <span> (подпись) </span> 
-  
-        <input type="text" name="name"  id="SmallSize" /><br>
-        <span> (ФИО) </span>
-    </li>
-    <li>
-        <input type="text" name="name" /><br>
-        <span> (дата прописью) </span>
-    </li>
-     <li>
-        <input type="text" name="name" /><br>
-    </li>
-    <li>
-    <label> 20</label>
-        <input type="text" name="name" />
-        <span>г.</span>
-    </li>
+    </ul>
     
-</ul>
+    <div class="Podpis">
+        
+        <div class="SmallSize">
+            <input  name="name" id="SmallSize" /> / <br>
+        <span class="DocFormPodpis"> (подпись) </span>
+        </div>
+        
+        <div class="SmallSize">
+              
+        <input type="text" name="KlientName"  id="SmallSize" pattern="[А-Яа-яЁё]"/><br>
+        <span class="DocFormPodpis"> (ФИО) </span>
+        </div>
+    </div>
+    
+    <div class="DocumentData">
+        
+        <div class="SmallSize">
+            
+        "<input type="text" name="name" id="SmallSize" pattern="[А-Яа-яЁё]"/>" <br>
+        <span class="DocFormPodpis"> (дата прописью) </span>
+        </div>
+        
+        <div>
+              
+        <input type="text" name="Month" id="SmallSize" pattern="[А-Яа-яЁё]"/>
+       <label> 20</label>
+        <input name="number" id="LittleData" pattern="[0-9]"/>
+        <span>г.</span>
+        </div>
+    </div>
+    
         </form>
     </div>
   </div>
